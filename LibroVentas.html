@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de ventas semanal</title>
+    <script src="js/control.js"></script>
+</head>
+<body>
+    <!-- Este div seran los controles que serviran para el ingreso de datos-->
+    <div><h2>Ingrese la venta y el producto</h2>
+        <h3>Seleccione el dia de la semana</h3>
+          <select name="dias" id="dias">
+              <option value="Lunes">Lunes</option>
+              <option value="Martes">Martes</option>
+              <option value="Miercoles">Miercoles</option>
+              <option value="Jueves">Jueves</option>
+              <option value="Viernes">Viernes</option>
+              <option value="Sabado">Sabado</option>
+              <option value="Domingo">Domingo</option>
+          </select>
+          <input type="text" placeholder="Producto" id="prod"> <input type="text" placeholder="Precio" id="pre">
+          
+          <input type="button" value="Enviar" onclick="agregar()"/>
+          
+    </div >
+    <!--En este div se mostra la tabla del dia seleccionado -->
+    <div id="tabla"> 
+
+    </div>
+    <!-- Aqui es donde se mostrara la grafica hecha en canvas-->
+    <canvas>
+
+    </canvas>
+</body>
+</html>
