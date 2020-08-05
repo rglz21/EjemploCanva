@@ -1,5 +1,5 @@
 var prod, pre;
-
+var totalLu=0,totalMa=0,totalMi=0,totalJu=0,totalVi=0,totalSa=0,totalDo=0;
 // Estos arreglos contendran los valores de la tabla 
 
 var lunes = new Array();
@@ -28,38 +28,45 @@ function agregar(){
              lunesp = [prod,pre];
              lunes.push(lunesp); 
              tablaLu();
+             totalLu = 0;
             break;
         case "Martes":
             alert("martes");
             martesp = [prod,pre];
             martes.push(martesp);          
             tablaMa();
+            totalMa =0;
             break;
         case "Miercoles":
             alert("Miercoles");
             miercolesp = [prod,pre];
             miercoles.push(miercolesp);
             tablaMi();
+            totalMi =0;
             break;
         case "Jueves":
             juevesp = [prod,pre];
             jueves.push(juevesp);
             tablaJu();
+            totalJu = 0;
             break;
         case "Viernes":
             viernesp=[prod,pre];
             viernes.push(viernesp);
             tablaVi();
+            totalVi=0;
             break;
         case "Sabado":
             sabadop=[prod,pre];
             sabado.push(sabadop);
             tablaSa();
+            totalSa = 0;
             break;
         case "Domingo":
             domingop=[prod,pre];
             domingo.push(domingop);
             tablaDo();
+            totalDo = 0;
             break;
         default:
             alert("Esa opcion no esta disponible");
@@ -83,12 +90,12 @@ function agregar(){
         tabla += "<tr>"
         tabla +="<td>"+lunes[i][0]+"</td><td>"+lunes[i][1]+"</td>"
         tabla +="</tr>"
-         
+        totalLu = totalLu + parseFloat(lunes[i][1]);
     }
     tabla +="</tbody>"
     tabla += "<tfoot>"
     tabla +="<tr><th>Ventas del dia</th>"
-    tabla +="<th>" + "" + "$ </th>"
+    tabla +="<th>" + totalLu + "$ </th>"
     tabla +="</tfoot>"
     tabla += "</table>"
     
@@ -112,12 +119,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+martes[i][0]+"</td><td>"+martes[i][1]+"</td>"
             tabla +="</tr>"
+            totalMa = totalMa + martes[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalMa + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
@@ -140,12 +148,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+miercoles[i][0]+"</td><td>"+miercoles[i][1]+"</td>"
             tabla +="</tr>"
+            totalMi = totalMi + miercoles[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalMi + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
@@ -168,12 +177,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+jueves[i][0]+"</td><td>"+jueves[i][1]+"</td>"
             tabla +="</tr>"
+            totalJu = totalJu + jueves[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalJu + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
@@ -196,12 +206,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+viernes[i][0]+"</td><td>"+viernes[i][1]+"</td>"
             tabla +="</tr>"
+            totalVi = totalVi + viernes[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalVi + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
@@ -224,12 +235,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+sabado[i][0]+"</td><td>"+sabado[i][1]+"</td>"
             tabla +="</tr>"
+            totalSa = totalSa + sabado[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalSa + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
@@ -252,12 +264,13 @@ function agregar(){
             tabla += "<tr>"
             tabla +="<td>"+domingo[i][0]+"</td><td>"+domingo[i][1]+"</td>"
             tabla +="</tr>"
+            totalDo = totalDo + domingo[i][1];
              
         }
         tabla +="</tbody>"
         tabla += "<tfoot>"
         tabla +="<tr><th>Ventas del dia</th>"
-        tabla +="<th>" + "" + "$ </th>"
+        tabla +="<th>" + totalDo + "$ </th>"
         tabla +="</tfoot>"
         tabla += "</table>"
         
