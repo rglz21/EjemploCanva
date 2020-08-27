@@ -22,6 +22,8 @@ const tBodyRef = tableRef.querySelector("tbody");
 const canvasRef = document.querySelector("#graph");
 const context = canvasRef.getContext("2d");
 
+
+
 // Creating Graph
 const graph = new Chart(context, {
   type: "bar",
@@ -38,7 +40,7 @@ const graph = new Chart(context, {
     datasets: [
       {
         label: "Ventas Diarias",
-        data: [0, 0, 0, 0, 0, 0, 0],
+        data: [0, 0, 0],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",
@@ -56,6 +58,7 @@ const graph = new Chart(context, {
           "rgba(255, 159, 64, 1)",
         ],
         borderWidth: 1,
+
       },
     ],
   },
